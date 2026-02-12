@@ -3,262 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Amber Leaf - The marketplace connecting businesses with trusted service providers. Get qualified leads or find the perfect partner for your project.">
-<title>Amber Leaf - Connect Businesses with Service Providers</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Connecting Businesses with the Right Service Providers — Faster, Smarter, Better. Amber Leaf helps companies find trusted partners and service providers reach genuine opportunities.">
+<title>Amber Leaf — Connecting Businesses with Service Providers</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin:0; padding:0; box-sizing:border-box; }
 :root {
---primary: #D4A574;
---primary-dark: #B8935F;
---text: #1a1a1a;
---text-light: #6B7280;
---bg: #FAFAFA;
---white: #FFFFFF;
---border: #E5E7EB;
+--primary:#D4A574;
+--primary-dark:#B8935F;
+--text:#1a1a1a;
+--text-light:#6B7280;
+--text-lighter:#9CA3AF;
+--bg:#FAFBFC;
+--white:#FFFFFF;
+--border:#E5E7EB;
+--hover-bg:#F9FAFB;
 }
-body {
-font-family: 'Inter', sans-serif;
-color: var(--text);
-line-height: 1.6;
--webkit-font-smoothing: antialiased;
-scroll-behavior: smooth;
-}
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-header { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 1000; }
-nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
-.logo { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; color: var(--primary); text-decoration: none; }
-.logo svg { width: 28px; height: 28px; }
-.nav-links { display: flex; list-style: none; gap: 32px; align-items: center; }
-.nav-links a { color: var(--text-light); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
-.nav-links a:hover { color: var(--primary); }
-.hero { padding: 160px 0 100px; text-align: center; background: linear-gradient(180deg, var(--bg) 0%, var(--white) 100%); }
-.hero h1 { font-size: 52px; font-weight: 700; letter-spacing: -2px; margin-bottom: 20px; line-height: 1.1; }
-.hero p { font-size: 20px; color: var(--text-light); max-width: 700px; margin: 0 auto 40px; }
-.cta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 700px; margin: 0 auto; }
-.cta-card { background: var(--white); border: 2px solid var(--border); border-radius: 16px; padding: 32px 24px; text-align: center; transition: all 0.3s; cursor: pointer; }
-.cta-card:hover { border-color: var(--primary); transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
-.cta-card h3 { font-size: 20px; margin-bottom: 12px; }
-.cta-card p { font-size: 15px; color: var(--text-light); margin-bottom: 20px; }
-.btn { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; transition: all 0.2s; }
-.btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
-section { padding: 80px 0; }
-.section-title { text-align: center; font-size: 42px; font-weight: 700; letter-spacing: -1.5px; margin-bottom: 60px; }
-.how-it-works { background: var(--bg); }
-.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
-.step { text-align: center; padding: 24px; }
-.step-number { width: 50px; height: 50px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; margin: 0 auto 16px; }
-.step h3 { font-size: 20px; margin-bottom: 12px; }
-.columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
-.column { background: var(--white); padding: 32px; border-radius: 12px; border: 1px solid var(--border); }
-.column h3 { font-size: 24px; margin-bottom: 16px; color: var(--primary); }
-.trusted-section { background: var(--bg); text-align: center; }
-.about { background: var(--white); }
-.about-text { max-width: 800px; margin: 0 auto; text-align: center; font-size: 18px; line-height: 1.8; color: var(--text-light); }
-.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); align-items: center; justify-content: center; }
-.modal.active { display: flex; }
-.modal-content { background: var(--white); padding: 40px; border-radius: 16px; width: 90%; max-width: 550px; max-height: 90vh; overflow-y: auto; position: relative; }
-.close { position: absolute; right: 24px; top: 24px; font-size: 28px; cursor: pointer; color: var(--text-light); border: none; background: none; }
-.form-header { text-align: center; margin-bottom: 32px; }
-.form-header h2 { font-size: 28px; margin-bottom: 8px; }
-.form-group { margin-bottom: 20px; }
-.form-group label { display: block; font-weight: 500; margin-bottom: 8px; font-size: 14px; }
-.form-group input, .form-group textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 15px; transition: all 0.2s; }
-.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(212,165,116,0.1); }
-.form-group textarea { min-height: 100px; resize: vertical; }
-footer { padding: 60px 0 30px; background: var(--text); color: white; }
-.footer-content { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
-.footer-col h4 { margin-bottom: 16px; font-size: 16px; }
-.footer-col ul { list-style: none; }
-.footer-col a { color: rgba(255,255,255,0.7); text-decoration: none; display: block; margin-bottom: 8px; transition: color 0.2s; }
-.footer-col a:hover { color: var(--primary); }
-.footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); }
-@media (max-width: 768px) { .hero h1 { font-size: 36px; } .cta-grid, .columns { grid-template-columns: 1fr; } }
+body { font-family:'Inter',sans-serif; color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; scroll-behavior:smooth; }
+.container { max-width:1200px; margin:0 auto; padding:0 32px; }
+header { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.98); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); z-index:1000; transition:all 0.3s; }
+nav { display:flex; justify-content:space-between; align-items:center; padding:20px 0; }
+.logo { display:flex; align-items:center; gap:12px; font-size:22px; font-weight:700; color:var(--primary); text-decoration:none; letter-spacing:-0.5px; }
+.logo svg { width:32px; height:32px; }
+.nav-links { display:flex; list-style:none; gap:40px; align-items:center; }
+.nav-links a { color:var(--text-light); text-decoration:none; font-size:15px; font-weight:500; transition:color 0.2s; }
+.nav-links a:hover { color:var(--primary); }
+.hero { padding:180px 0 120px; text-align:center; background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%); }
+.hero h1 { font-size:58px; font-weight:800; letter-spacing:-2.5px; margin-bottom:24px; line-height:1.1; }
+.hero-subtext { font-size:21px; color:var(--text-light); max-width:750px; margin:0 auto 48px; font-weight:400; line-height:1.7; }
+.cta-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; max-width:750px; margin:0 auto; }
+.cta-card { background:var(--white); border:2px solid var(--border); border-radius:20px; padding:40px 32px; text-align:center; transition:all 0.3s ease; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.04); }
+.cta-card:hover { border-color:var(--primary); transform:translateY(-6px); box-shadow:0 16px 32px rgba(0,0,0,0.08); }
+.cta-card h3 { font-size:22px; margin-bottom:12px; font-weight:700; }
+.cta-card p { font-size:15px; color:var(--text-lighter); margin-bottom:24px; line-height:1.6; }
+.btn { display:inline-block; padding:14px 32px; background:var(--primary); color:white; text-decoration:none; border-radius:12px; font-weight:600; font-size:15px; border:none; cursor:pointer; transition:all 0.3s; box-shadow:0 4px 12px rgba(212,165,116,0.25); }
+.btn:hover { background:var(--primary-dark); transform:translateY(-2px); box-shadow:0 8px 20px rgba(212,165,116,0.35); }
+section { padding:100px 0; }
+.section-title { text-align:center; font-size:44px; font-weight:800; letter-spacing:-2px; margin-bottom:20px; }
+.section-subtitle { text-align:center; font-size:18px; color:var(--text-light); max-width:700px; margin:0 auto 64px; line-height:1.7; }
+.how-it-works { background:var(--bg); }
+.steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:48px; }
+.step { text-align:center; }
+.step-number { width:64px; height:64px; background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%); color:white; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:28px; font-weight:800; margin:0 auto 24px; box-shadow:0 8px 20px rgba(212,165,116,0.3); }
+.step h3 { font-size:22px; margin-bottom:16px; font-weight:700; }
+.step p { color:var(--text-light); line-height:1.7; }
+.columns { display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:40px; }
+.column { background:var(--white); padding:48px 40px; border-radius:16px; border:2px solid var(--border); box-shadow:0 4px 12px rgba(0,0,0,0.05); transition:all 0.3s; }
+.column:hover { border-color:var(--primary); box-shadow:0 12px 32px rgba(0,0,0,0.08); }
+.column h3 { font-size:26px; margin-bottom:20px; color:var(--primary); font-weight:700; }
+.column p { font-size:16px; line-height:1.8; color:var(--text-light); margin-bottom:20px; }
+.column ul { margin-top:24px; line-height:2.2; color:var(--text); }
+.trusted-section { background:var(--bg); }
+.about p { max-width:850px; margin:0 auto; text-align:center; font-size:19px; line-height:1.9; color:var(--text-light); }
+.modal { display:none; position:fixed; z-index:2000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.65); align-items:center; justify-content:center; }
+.modal.active { display:flex; }
+.modal-content { background:var(--white); padding:48px; border-radius:24px; width:90%; max-width:580px; max-height:90vh; overflow-y:auto; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3); }
+.close { position:absolute; right:32px; top:32px; font-size:32px; cursor:pointer; color:var(--text-lighter); border:none; background:none; transition:color 0.2s; }
+.close:hover { color:var(--text); }
+.form-header { text-align:center; margin-bottom:40px; }
+.form-header h2 { font-size:30px; margin-bottom:12px; font-weight:800; letter-spacing:-1px; }
+.form-header p { color:var(--text-light); font-size:16px; }
+.form-group { margin-bottom:24px; }
+.form-group label { display:block; font-weight:600; margin-bottom:10px; font-size:14px; color:var(--text); }
+.form-group input,.form-group textarea { width:100%; padding:14px 18px; border:2px solid var(--border); border-radius:12px; font-family:inherit; font-size:15px; transition:all 0.2s; background:var(--white); }
+.form-group input:focus,.form-group textarea:focus { outline:none; border-color:var(--primary); box-shadow:0 0 0 4px rgba(212,165,116,0.1); }
+.form-group textarea { min-height:120px; resize:vertical; }
+footer { padding:80px 0 40px; background:var(--text); color:white; }
+.footer-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:48px; margin-bottom:48px; }
+.footer-col h4 { margin-bottom:20px; font-size:17px; font-weight:700; }
+.footer-col p { font-size:14px; line-height:1.7; opacity:0.8; }
+.footer-col a { color:rgba(255,255,255,0.75); text-decoration:none; display:block; margin-bottom:12px; transition:all 0.2s; font-size:15px; }
+.footer-col a:hover { color:var(--primary); transform:translateX(2px); }
+.footer-bottom { text-align:center; padding-top:40px; border-top:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.6); font-size:14px; }
+@media (max-width:768px) { .hero h1 { font-size:38px; } .hero-subtext { font-size:18px; } .cta-grid,.columns { grid-template-columns:1fr; } .nav-links { gap:24px; font-size:14px; } }
 </style>
 </head>
 <body>
-<header>
-<nav class="container">
-<a href="#home" class="logo"><svg viewBox="0 0 100 100"><path d="M50 10 L80 90 L50 75 L20 90 Z" fill="currentColor"/></svg>Amber Leaf</a>
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#how-it-works">How It Works</a></li>
-<li><a href="#who-this-is-for">Who This Is For</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-</header>
-<section class="hero" id="home">
-<div class="container">
-<h1>Connect Businesses with Service Providers</h1>
-<p>The marketplace that bridges the gap between businesses seeking services and providers ready to deliver quality results.</p>
-<div class="cta-grid">
-<div class="cta-card" onclick="openModal('client')">
-<h3>👥 I Need a Service</h3>
-<p>Find trusted providers for your business needs</p>
-<button class="btn">Get Started</button>
-</div>
-<div class="cta-card" onclick="openModal('provider')">
-<h3>💼 I Provide Services</h3>
-<p>Get qualified leads for your business</p>
-<button class="btn">Join Network</button>
-</div>
-</div>
-</div>
-</section>
-<section class="how-it-works" id="how-it-works">
-<div class="container">
-<h2 class="section-title">How It Works</h2>
-<div class="steps">
-<div class="step">
-<div class="step-number">1</div>
-<h3>Submit Your Need</h3>
-<p>Tell us what you're looking for or what services you provide</p>
-</div>
-<div class="step">
-<div class="step-number">2</div>
-<h3>We Match You</h3>
-<p>Our team connects you with the right businesses that fit your requirements</p>
-</div>
-<div class="step">
-<div class="step-number">3</div>
-<h3>Connect & Grow</h3>
-<p>Start working together and grow your business with quality partnerships</p>
-</div>
-</div>
-</div>
-</section>
-<section id="who-this-is-for">
-<div class="container">
-<h2 class="section-title">Who This Is For</h2>
-<div class="columns">
-<div class="column">
-<h3>Businesses Looking for Services</h3>
-<p>Are you searching for reliable service providers? We connect you with vetted professionals who can deliver exactly what your business needs.</p>
-<ul style="margin-top:16px; line-height:2;">
-<li>✓ Pre-vetted providers</li>
-<li>✓ Quick matching process</li>
-<li>✓ Quality guaranteed</li>
-</ul>
-</div>
-<div class="column">
-<h3>Service Providers Looking for Clients</h3>
-<p>Want consistent, quality leads for your business? Join our network and get connected with businesses actively seeking your services.</p>
-<ul style="margin-top:16px; line-height:2;">
-<li>✓ Qualified lead generation</li>
-<li>✓ No cold calling needed</li>
-<li>✓ Focus on what you do best</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section class="trusted-section">
-<div class="container">
-<h2 class="section-title">Trusted by Growing Businesses</h2>
-<p style="color:var(--text-light); font-size:18px; margin-bottom:40px;">Join hundreds of businesses already benefiting from quality connections</p>
-<div style="min-height:100px; display:flex; align-items:center; justify-content:center; color:var(--text-light);">
-<p>Partner logos coming soon...</p>
-</div>
-</div>
-</section>
-<section class="about" id="about">
-<div class="container">
-<h2 class="section-title">About Amber Leaf</h2>
-<div class="about-text">
-<p>Amber Leaf is a marketplace built on the principle of connecting businesses efficiently and ethically. We understand that finding the right service provider or quality clients can be challenging. That's why we've created a platform that simplifies the process, ensuring both sides get exactly what they need to grow.</p>
-</div>
-</div>
-</section>
-<div id="clientModal" class="modal">
-<div class="modal-content">
-<button class="close" onclick="closeModal('client')">&times;</button>
-<div class="form-header">
-<h2>Tell Us What You Need</h2>
-<p>We'll connect you with the right service provider</p>
-</div>
-<form action="https://api.web3forms.com/submit" method="POST">
-<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-<input type="hidden" name="subject" value="New Service Request - Amber Leaf">
-<input type="hidden" name="form_type" value="Client - Need Service">
-<div class="form-group"><label>Your Name *</label><input type="text" name="name" required></div>
-<div class="form-group"><label>Email *</label><input type="email" name="email" required></div>
-<div class="form-group"><label>Phone/WhatsApp *</label><input type="tel" name="phone" required></div>
-<div class="form-group"><label>Company Name</label><input type="text" name="company"></div>
-<div class="form-group"><label>What Service Do You Need? *</label><input type="text" name="service_needed" placeholder="e.g., Digital Marketing, Web Development" required></div>
-<div class="form-group"><label>Project Details</label><textarea name="details" placeholder="Tell us about your requirements..."></textarea></div>
-<button type="submit" class="btn" style="width:100%; padding:14px;">Submit Request</button>
-</form>
-</div>
-</div>
-<div id="providerModal" class="modal">
-<div class="modal-content">
-<button class="close" onclick="closeModal('provider')">&times;</button>
-<div class="form-header">
-<h2>Join Our Provider Network</h2>
-<p>Start receiving qualified leads for your business</p>
-</div>
-<form action="https://api.web3forms.com/submit" method="POST">
-<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-<input type="hidden" name="subject" value="New Provider Application - Amber Leaf">
-<input type="hidden" name="form_type" value="Provider - Want Leads">
-<div class="form-group"><label>Your Name *</label><input type="text" name="name" required></div>
-<div class="form-group"><label>Email *</label><input type="email" name="email" required></div>
-<div class="form-group"><label>Phone/WhatsApp *</label><input type="tel" name="phone" required></div>
-<div class="form-group"><label>Business/Company Name *</label><input type="text" name="business" required></div>
-<div class="form-group"><label>Services You Provide *</label><input type="text" name="services" placeholder="e.g., Digital Marketing, Web Development" required></div>
-<div class="form-group"><label>Tell Us About Your Business</label><textarea name="about" placeholder="What makes your services unique? What kind of leads are you looking for?"></textarea></div>
-<button type="submit" class="btn" style="width:100%; padding:14px;">Apply to Join</button>
-</form>
-</div>
-</div>
-<footer id="contact">
-<div class="footer-content">
-<div class="footer-grid">
-<div class="footer-col">
-<h4>Amber Leaf</h4>
-<p style="color:rgba(255,255,255,0.7); font-size:14px; margin-top:8px;">Connecting businesses with trusted service providers</p>
-</div>
-<div class="footer-col">
-<h4>Quick Links</h4>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#how-it-works">How It Works</a></li>
-<li><a href="#who-this-is-for">Who This Is For</a></li>
-<li><a href="#about">About</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Legal</h4>
-<ul>
-<li><a href="privacy.html">Privacy Policy</a></li>
-<li><a href="terms.html">Terms of Service</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Contact</h4>
-<ul>
-<li><a href="tel:7003902219">7003902219</a></li>
-<li><a href="mailto:s7003902219@gmail.com">s7003902219@gmail.com</a></li>
-</ul>
-<div style="margin-top:16px; display:flex; gap:12px;">
-<a href="#" style="color:rgba(255,255,255,0.7); font-size:20px;">●</a>
-<a href="#" style="color:rgba(255,255,255,0.7); font-size:20px;">●</a>
-<a href="#" style="color:rgba(255,255,255,0.7); font-size:20px;">●</a>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<p>&copy; 2026 Amber Leaf. All rights reserved.</p>
-</div>
-</div>
-</footer>
+<header><nav class="container"><a href="#home" class="logo"><svg viewBox="0 0 100 100"><path d="M50 10 L80 90 L50 75 L20 90 Z" fill="currentColor"/></svg>Amber Leaf</a><ul class="nav-links"><li><a href="#home">Home</a></li><li><a href="#how-it-works">How It Works</a></li><li><a href="#who-this-is-for">Who This Is For</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></nav></header>
+<section class="hero" id="home"><div class="container"><h1>Connecting Businesses with the Right Service Providers — Faster, Smarter, Better.</h1><p class="hero-subtext">We help companies find trusted partners and help service providers reach genuine business opportunities — all in one streamlined platform.</p><div class="cta-grid"><div class="cta-card" onclick="openModal('client')"><h3>👥 Find a Service Provider</h3><p>Discover trusted professionals who can deliver exactly what your business needs</p><button class="btn">Get Started</button></div><div class="cta-card" onclick="openModal('provider')"><h3>💼 Get Business Leads</h3><p>Connect with companies actively looking for your expertise</p><button class="btn">Join Network</button></div></div></div></section>
+<section class="how-it-works" id="how-it-works"><div class="container"><h2 class="section-title">How Amber Leaf Works</h2><p class="section-subtitle">A simple, streamlined process to connect you with the right partners</p><div class="steps"><div class="step"><div class="step-number">1</div><h3>Submit Your Need</h3><p>Tell us what your business requires or what services you offer</p></div><div class="step"><div class="step-number">2</div><h3>Smart Matching</h3><p>We analyze your requirements and connect you with the most relevant partners</p></div><div class="step"><div class="step-number">3</div><h3>Connect & Grow</h3><p>Start meaningful business conversations and build long-term partnerships</p></div></div></div></section>
+<section id="who-this-is-for"><div class="container"><h2 class="section-title">Who This Is For</h2><div class="columns"><div class="column"><h3>For Businesses Looking for Services</h3><p>If you need reliable vendors, agencies, or specialists, Amber Leaf helps you discover trusted service providers without endless searching.</p><ul><li>✓ Pre-vetted professionals</li><li>✓ Quick turnaround time</li><li>✓ Quality-first approach</li></ul></div><div class="column"><h3>For Service Providers</h3><p>If you want real business opportunities, we connect you with companies actively looking for your expertise.</p><ul><li>✓ Qualified leads</li><li>✓ No cold outreach needed</li><li>✓ Grow your client base</li></ul></div></div></div></section>
+<section class="trusted-section"><div class="container"><h2 class="section-title">Trusted by Growing Businesses</h2><p class="section-subtitle">Join hundreds of businesses already benefiting from quality connections</p><div style="min-height:80px;display:flex;align-items:center;justify-content:center;color:var(--text-lighter);font-size:15px;"><p>Partner logos coming soon</p></div></div></section>
+<section class="about" id="about"><div class="container"><h2 class="section-title">About Amber Leaf</h2><p>Amber Leaf is built to simplify business collaboration. We believe that growth happens when the right people connect at the right time. Our platform focuses on efficiency, trust, and meaningful partnerships — helping businesses scale without friction.</p></div></section>
+<div id="clientModal" class="modal"><div class="modal-content"><button class="close" onclick="closeModal('client')">&times;</button><div class="form-header"><h2>Tell Us What You Need</h2><p>We'll connect you with the right service provider</p></div><form action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"><input type="hidden" name="subject" value="New Service Request - Amber Leaf"><input type="hidden" name="form_type" value="Client - Need Service"><div class="form-group"><label>Your Name *</label><input type="text" name="name" required></div><div class="form-group"><label>Email *</label><input type="email" name="email" required></div><div class="form-group"><label>Phone/WhatsApp *</label><input type="tel" name="phone" required></div><div class="form-group"><label>Company Name</label><input type="text" name="company"></div><div class="form-group"><label>What Service Do You Need? *</label><input type="text" name="service_needed" placeholder="e.g., Digital Marketing, Web Development" required></div><div class="form-group"><label>Project Details</label><textarea name="details" placeholder="Tell us about your requirements..."></textarea></div><button type="submit" class="btn" style="width:100%;padding:16px;">Submit Request</button></form></div></div>
+<div id="providerModal" class="modal"><div class="modal-content"><button class="close" onclick="closeModal('provider')">&times;</button><div class="form-header"><h2>Join Our Provider Network</h2><p>Start receiving qualified leads for your business</p></div><form action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"><input type="hidden" name="subject" value="New Provider Application - Amber Leaf"><input type="hidden" name="form_type" value="Provider - Want Leads"><div class="form-group"><label>Your Name *</label><input type="text" name="name" required></div><div class="form-group"><label>Email *</label><input type="email" name="email" required></div><div class="form-group"><label>Phone/WhatsApp *</label><input type="tel" name="phone" required></div><div class="form-group"><label>Business/Company Name *</label><input type="text" name="business" required></div><div class="form-group"><label>Services You Provide *</label><input type="text" name="services" placeholder="e.g., Digital Marketing, Web Development" required></div><div class="form-group"><label>Tell Us About Your Business</label><textarea name="about" placeholder="What makes your services unique? What kind of leads are you looking for?"></textarea></div><button type="submit" class="btn" style="width:100%;padding:16px;">Apply to Join</button></form></div></div>
+<footer id="contact"><div class="container"><div class="footer-grid"><div class="footer-col"><h4>Amber Leaf</h4><p>Connecting businesses with trusted service providers</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#how-it-works">How It Works</a></li><li><a href="#who-this-is-for">Who This Is For</a></li><li><a href="#about">About</a></li></ul></div><div class="footer-col"><h4>Policies</h4><ul><li><a href="privacy.html">Privacy Policy — Details coming soon</a></li><li><a href="terms.html">Terms of Service — Details coming soon</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7003902219">7003902219</a></li><li><a href="mailto:s7003902219@gmail.com">s7003902219@gmail.com</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 Amber Leaf. All rights reserved.</p></div></div></footer>
 <script>
-function openModal(type) { document.getElementById(type+'Modal').classList.add('active'); }
-function closeModal(type) { document.getElementById(type+'Modal').classList.remove('active'); }
-window.onclick = function(e) { if (e.target.classList.contains('modal')) { e.target.classList.remove('active'); } }
+function openModal(type){document.getElementById(type+'Modal').classList.add('active');}
+function closeModal(type){document.getElementById(type+'Modal').classList.remove('active');}
+window.onclick=function(e){if(e.target.classList.contains('modal')){e.target.classList.remove('active');}}
 </script>
 </body>
 </html>
