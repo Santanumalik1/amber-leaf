@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amber Leaf - B2B Lead Generation</title>
+    <title>Amber Leaf - Premium B2B Lead Generation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,282 +14,185 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --primary: #D4A574;
+            --primary-dark: #B8935F;
+            --text-primary: #1a1a1a;
+            --text-secondary: #6B7280;
+            --bg-light: #FAFAFA;
+            --white: #FFFFFF;
+            --border: #E5E7EB;
+        }
+        
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--text-primary);
+            background: var(--white);
             line-height: 1.6;
-            color: #2c3e50;
-            background: #fefefe;
+            -webkit-font-smoothing: antialiased;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
         
+        /* Header */
         header {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
+            position: fixed;
             top: 0;
-            z-index: 100;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 0;
         }
         
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #d4a574;
+            gap: 12px;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: -0.5px;
         }
         
         .logo svg {
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
         }
         
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
+        .nav-link {
+            color: var(--text-secondary);
             text-decoration: none;
-            color: #2c3e50;
+            font-size: 15px;
             font-weight: 500;
-            transition: color 0.3s;
-        
-        
-        .nav-links a:hover {
-            color: #d4a574;
+            transition: color 0.2s;
         }
         
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
         .hero {
-            padding: 6rem 0;
+            padding: 180px 0 120px;
             text-align: center;
-            background: linear-gradient(135deg, #fafbfc 0%, #f8f9fa 100%);
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--white) 100%);
         }
         
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            color: #1a1a1a;
+            font-size: 56px;
             font-weight: 700;
-            letter-spacing: -1px;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            line-height: 1.1;
         }
         
         .hero p {
-            font-size: 1.25rem;
-            color: #6c757d;
-            margin-bottom: 2.5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
             font-weight: 400;
         }
         
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, #d4a574 0%, #c99a6e 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 8px;
             font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
-        }
-        
-        .benefits, .how-it-works, .about, .final-cta {
-            padding: 5rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #1a1a1a;
-            font-weight: 700;
-        }
-        
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .benefit-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .benefit-card h3 {
-            color: #d4a574;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .step {
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #d4a574 0%, #c99a6e 100%);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 1.5rem;
-        }
-        
-        .about {
-            background: #f8f9fa;
-        }
-        
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        .final-cta {
-            text-align: center;
-            background: linear-gradient(135deg, #fafbfc 0%, #f8f9fa 100%);
-        }
-        
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 3rem 0 1.5rem;
-            text-align: center;
-        }
-        
-        .footer-content {
-            margin-bottom: 2rem;
-        }
-        
-        .contact-info {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-info a {
-            color: #d4a574;
+            font-size: 15px;
             text-decoration: none;
-        }
-        
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            animation: fadeIn 0.3s;
-        }
-        
-        .modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        
-        
-        .modal-content {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 500px;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            animation: slideIn 0.3s;
-        }
-        
-        .close-modal {
-            position: absolute;
-            right: 1.5rem;
-            top: 1.5rem;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #6c757d;
+            transition: all 0.2s;
             border: none;
-            background: none;
-            line-height: 1;
+            cursor: pointer;
         }
         
-        .close-modal:hover {
-            color: #2c3e50;
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 165, 116, 0.3);
+        }
+        
+        /* Lead Form Section */
+        .lead-form-section {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 48px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        
+        .form-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+        
+        .form-header p {
+            color: var(--text-secondary);
+            font-size: 16px;
         }
         
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 24px;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            color: #2c3e50;
             font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--text-primary);
         }
         
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #e9ecef;
+            padding: 12px 16px;
+            border: 1px solid var(--border);
             border-radius: 8px;
             font-family: inherit;
-            font-size: 1rem;
-            transition: border-color 0.3s;
+            font-size: 15px;
+            transition: all 0.2s;
         }
         
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #d4a574;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
         }
         
         .form-group textarea {
@@ -297,207 +200,202 @@
             resize: vertical;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
         }
         
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        /* Benefits */
+        .benefits {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            margin-bottom: 60px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+        
+        .benefit-card {
+            padding: 32px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.2s;
+        }
+        
+        .benefit-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .benefit-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        
+        .benefit-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            background: var(--text-primary);
+            color: white;
+            text-align: center;
+        }
+        
+        .footer-content {
+            margin-bottom: 24px;
+        }
+        
+        .footer-content p {
+            margin-bottom: 8px;
+        }
+        
+        .footer-content a {
+            color: var(--primary);
+            text-decoration: none;
         }
         
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 36px;
             }
-            
-            .nav-links {
-                gap: 1rem;
+            .hero p {
+                font-size: 18px;
             }
-            
-            .benefits-grid, .steps {
-                grid-template-columns: 1fr;
+            .form-container {
+                padding: 32px 24px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 10 L80 90 L50 75 L20 90 Z" fill="#d4a574"/>
+                    <path d="M50 10 L80 90 L50 75 L20 90 Z" fill="currentColor"/>
                 </svg>
-                <span>Amber Leaf</span>
+                Amber Leaf
             </div>
-            <ul class="nav-links">
-                <li><a href="#how">How It Works</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="tel:7003902219" class="nav-link">7003902219</a>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Turn Your Google Searches Into Qualified B2B Leads</h1>
-            <p>We connect businesses searching for services with premium service providers. Get high-quality, ready-to-convert leads delivered directly to you.</p>
-            <button class="cta-button" onclick="openModal()">Get Your First 5 Leads Free</button>
+            <h1>Premium B2B Leads.<br/>Delivered to You.</h1>
+            <p>We capture high-intent enquiries from Google searches and connect them with trusted service providers.</p>
+            <a href="#form" class="btn btn-primary">Get Your First 5 Leads Free →</a>
         </div>
     </section>
 
-    <section class="benefits" id="benefits">
+    <!-- Benefits Section -->
+    <section class="benefits">
         <div class="container">
-            <h2 class="section-title">Why Choose Amber Leaf?</h2>
+            <h2 class="section-title">Why Choose Amber Leaf</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <h3>Pre-Qualified Leads</h3>
-                    <p>Every lead we deliver has actively searched for your services and expressed genuine interest. No cold calling required.</p>
+                    <p>Every lead has actively searched for your services. No cold calling. No wasted time.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>Pay For Results</h3>
-                    <p>Flexible pricing models - monthly retainer or pay-per-lead. You only invest in what works for your business.</p>
+                    <h3>Flexible Pricing</h3>
+                    <p>Monthly retainer or pay-per-lead. You only invest in what works for your business.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>Focus On Your Expertise</h3>
-                    <p>We handle lead generation and initial qualification. You focus on what you do best - delivering exceptional service.</p>
+                    <h3>Focus on Delivery</h3>
+                    <p>We handle lead generation. You focus on delivering exceptional service to your clients.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="how-it-works" id="how">
+    <!-- Lead Form Section -->
+    <section class="lead-form-section" id="form">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>We Capture Interest</h3>
-                    <p>Businesses searching on Google find our platform and submit their requirements</p>
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Get Your First 5 Leads Free</h2>
+                    <p>Fill out the form below and we'll get back to you within 48 hours</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>We Qualify Leads</h3>
-                    <p>Our team verifies each inquiry to ensure it's genuine and matches your expertise</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>You Close Deals</h3>
-                    <p>Receive qualified leads ready to convert. Focus your energy on delivering results</p>
-                </div>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Lead Request - Amber Leaf">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone/WhatsApp *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="business">Business Name</label>
+                        <input type="text" id="business" name="business">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service You Provide *</label>
+                        <input type="text" id="service" name="service" placeholder="e.g., Digital Marketing, Web Development" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell us about your business</label>
+                        <textarea id="message" name="message" placeholder="What kind of leads are you looking for?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-submit">Submit Request</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">About Amber Leaf</h2>
-            <div class="about-content">
-                <p>At Amber Leaf, we're revolutionizing B2B lead generation by bridging the gap between businesses seeking services and exceptional service providers. Our mission is simple: transform organic search traffic into valuable business opportunities.</p>
-                <p>We don't provide services, manage customers, or close deals. Instead, we specialize in what we do best - capturing genuine interest from businesses actively searching for solutions and connecting them with the right partners who can deliver outstanding results.</p>
-                <p>Join our network of trusted service providers and experience a steady stream of qualified leads that are already interested in what you offer.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="final-cta">
-        <div class="container">
-            <h2 class="section-title">Ready to Grow Your Business?</h2>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem; color: #6c757d;">Start receiving qualified leads today</p>
-            <button class="cta-button" onclick="openModal()">Get Your First 5 Leads Free</button>
-        </div>
-    </section>
-
-    <footer id="contact">
+    <!-- Footer -->
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="contact-info">
-                    <p>Ready to partner with us?</p>
-                    <p>Call us at <a href="tel:7003902219">7003902219</a></p>
-                    <p>Email: <a href="mailto:s7003902219@gmail.com">s7003902219@gmail.com</a></p>
-                </div>
+                <p><strong>Ready to partner with us?</strong></p>
+                <p>Call: <a href="tel:7003902219">7003902219</a></p>
+                <p>Email: <a href="mailto:s7003902219@gmail.com">s7003902219@gmail.com</a></p>
             </div>
-            <p>&copy; 2024 Amber Leaf. All rights reserved.</p>
+            <p>&copy; 2026 Amber Leaf. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Contact Form Modal -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal()">&times;</button>
-            <h2 style="margin-bottom: 1.5rem; color: #1a1a1a;">Get Your First 5 Leads Free</h2>
-            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                <input type="hidden" name="subject" value="New Lead Request from Amber Leaf">
-                <input type="hidden" name="from_name" value="Amber Leaf Website">
-                
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone/WhatsApp Number *</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="business">Business Name</label>
-                    <input type="text" id="business" name="business">
-                </div>
-                
-                <div class="form-group">
-                    <label for="service">Service You Provide *</label>
-                    <input type="text" id="service" name="service" placeholder="e.g., Digital Marketing, Web Development" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Additional Information</label>
-                    <textarea id="message" name="message" placeholder="Tell us about your business and what kind of leads you're looking for..."></textarea>
-                </div>
-                
-                <button type="submit" class="cta-button" style="width: 100%;">Submit Request</button>
-            </form>
-        </div>
-    </div>
-
     <script>
-        function openModal() {
-            document.getElementById('contactModal').classList.add('active');
-        }
-        
-        function closeModal() {
-            document.getElementById('contactModal').classList.remove('active');
-        }
-        
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('contactModal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-        
-        // Smooth scrolling for navigation links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
